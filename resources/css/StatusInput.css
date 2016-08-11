@@ -1,0 +1,58 @@
+.custom-statuses {
+	padding: 0 0 0 24px;
+}
+.custom-statuses li {
+	position: relative;
+	padding: 7px 45px 7px 0;
+
+	cursor: pointer;
+}
+.custom-statuses li:not(.sel):hover {
+	color: #0d78f2;
+	text-decoration: underline;
+}
+.custom-statuses li.sel {
+	color: #8f98a3;
+	cursor: default;
+}
+.custom-statuses li.sel:before {
+	content: 'check';
+	display: inline-block;
+	float: left;
+	margin: 3px 0 0 -16px;
+
+	font-size: 11px;
+	color: #8f98a3 !important;
+	font-family: 'Craft';
+	-webkit-font-feature-settings: "liga", "dlig";
+	-moz-font-feature-settings: "liga=1, dlig=1";
+	-moz-font-feature-settings: "liga", "dlig";
+	-ms-font-feature-settings: "liga", "dlig";
+	-o-font-feature-settings: "liga", "dlig";
+	font-feature-settings: "liga", "dlig";
+	text-rendering: optimizeLegibility;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	direction: ltr;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-align: center;
+	font-style: normal;
+	vertical-align: middle;
+	word-wrap: normal !important;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+.custom-statuses li + li {
+	border-top: 1px solid #e3e5e8;
+}
+.custom-statuses .status {
+	position: absolute;
+	top: 50%;
+	right: 16px;
+	margin: -5px 0 0 !important;
+}
