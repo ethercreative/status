@@ -14,7 +14,8 @@ function StatusInput(namespaceId, statuses) {
 			}
 		}
 
-		if (this.active === '') this.active = this.statuses[0].handle;
+		if (this.active === '' && this.statuses.length)
+			this.active = this.statuses[0].handle;
 	}
 
 	this.input.value = this.active;
@@ -48,7 +49,7 @@ StatusInput.prototype.createInput = function () {
 			if (self.active === this.handle) return;
 
 			this.className = 'sel';
-			self.activeLi.className = '';
+			self.activeLi && (self.activeLi.className = '');
 			self.activeLi = this;
 			self.active = this.handle;
 			self.input.value = this.handle;

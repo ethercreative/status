@@ -11,7 +11,7 @@ class StatusPlugin extends BasePlugin {
 
 	public function getVersion()
 	{
-		return '0.0.1';
+		return '1.0.0';
 	}
 
 	public function getDeveloper()
@@ -27,6 +27,11 @@ class StatusPlugin extends BasePlugin {
 	public function getDescription()
 	{
 		return 'A custom status FieldType';
+	}
+
+	public function getReleaseFeedUrl()
+	{
+		return 'https://raw.githubusercontent.com/ethercreative/status/master/releases.json';
 	}
 
 }

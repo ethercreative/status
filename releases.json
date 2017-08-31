@@ -1,0 +1,12 @@
+[
+  {
+    "version": "1.0.0",
+    "downloadUrl": "https://github.com/ethercreative/status/archive/v1.0.0.zip",
+    "date": "2017-08-31T10:00:00-08:00",
+    "notes": [
+      "[Improved] Version bump / Restructured repo / Added releases feed",
+      "[Improved] Colour input in fieldtype settings now an actual colour input.",
+      "[Fixed] Fixed status field not being previewable (#1 via @fantasticmachine)"
+    ]
+  }
+]

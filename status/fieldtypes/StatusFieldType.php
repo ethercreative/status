@@ -117,8 +117,10 @@ class StatusFieldType extends BaseFieldType implements IPreviewableFieldType
 				}
 			}
 			$status = $this->getSettings()->statuses[$key];
-			return '<div class="color small static"><div class="colorpreview" style="background-color: '.$status['color'].';"></div></div>'.
-			'<div class="colorhex code">'.$status['name'].'</div>';
+			return '<div class="color small static">' .
+			           '<div class="colorpreview" style="background-color: '.$status['color'].';"></div>' .
+			       '</div>'.
+			       '<div class="colorhex" style="color:#29323d">'.$status['name'].'</div>';
 		}
 		else
 		{
