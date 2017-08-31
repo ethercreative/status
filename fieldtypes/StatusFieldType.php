@@ -2,7 +2,7 @@
 
 namespace Craft;
 
-class StatusFieldType extends BaseFieldType
+class StatusFieldType extends BaseFieldType implements IPreviewableFieldType
 {
 
 	public function getName ()
@@ -108,15 +108,21 @@ class StatusFieldType extends BaseFieldType
 
 	public function getTableAttributeHtml ($value)
 	{
-		if ($value) {
-			return '<div class="color small static"><div class="colorpreview" style="background-color: ' .
-			       $value->color .
-			       ';"></div></div>' .
-			       '<div class="colorhex code">' .
-			       $value->title .
-			       '</div>';
-		} else {
-			return '';
+		if ($value)
+		{
+			foreach($this->getSettings()->statuses as $k=>$v){
+				$a = array_search($value,$v,true) ? $k : false;
+				if($a !== false){
+					$key = $k;
+				}
+			}
+			$status = $this->getSettings()->statuses[$key];
+			return '<div class="color small static"><div class="colorpreview" style="background-color: '.$status['color'].';"></div></div>'.
+			'<div class="colorhex code">'.$status['name'].'</div>';
+		}
+		else
+		{
+			return '';	
 		}
 	}
 
